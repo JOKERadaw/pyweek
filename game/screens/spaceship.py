@@ -11,11 +11,11 @@ class GameScreen:
 
         self.arr = []
         self.backgrounds=[]
-        self.background = pygame.image.load("images/first_room.png")
+        self.background = pygame.image.load("first_room.png")
         self.backgrounds.append(self.background)
         self.background = pygame.transform.scale(self.background, (width, height))
 
-        key = pygame.image.load("images/key.png")
+        key = pygame.image.load("key.png")
         self.key = pygame.transform.scale(key, (25, 30))
         self.battery=10000000
         self.used=0
@@ -58,5 +58,5 @@ class GameScreen:
     def clickedkey(self,a,b):
         if a>self.xkey and a<self.widthkey+self.xkey and b>self.ykey and b<self.heightkey+self.ykey:
             self.gotkey=1
-            self.background = pygame.image.load("images/first_room.png")
+            self.background = pygame.image.load("first_room.png")
             self.background = pygame.transform.scale(self.background, (self.width, self.height))
